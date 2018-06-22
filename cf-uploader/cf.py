@@ -10,7 +10,7 @@ def _lookup_zone_id(cloudflare, domain):
 
     """ Return the zone_id for a given domain using the cloudflare interface. """
 
-    logger.info("Resolving cloudflare zoneid for domain name: ".format(domain))
+    logger.info("Resolving cloudflare zoneid for domain name: {}".format(domain))
     zones = cloudflare.zones.get(params={'name': domain})
 
     if not len(zones):
